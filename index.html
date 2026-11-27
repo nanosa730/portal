@@ -4,37 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Tool Studio</title>
-<meta name="description" content="AIでつくった、学校の仕事に使えるスキル・シート・リンクの置き場。">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="学校の仕事に使えるアプリ・図解・スキル・シートの置き場。">
+<meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1916" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:,">
 </head>
 <body>
+
 <header class="site-header">
   <div class="wrap">
-    <h1 class="site-title"><a href="index.html">AI Tool Studio</a></h1>
-    <p class="site-note">先生の仕事に使えるスキル・シート・リンクを置いています。どれも自由に使って、書き換えて構いません。</p>
+    <div class="header-row">
+      <h1 class="wordmark"><a href="index.html">AI Tool Studio</a></h1>
+      <input id="search" class="search" type="search" placeholder="キーワードで探す" aria-label="キーワードで探す" autocomplete="off">
+    </div>
+    <div class="toolbar">
+      <div id="types" class="types" role="tablist" aria-label="種別で絞り込む"></div>
+      <span id="count" class="count"></span>
+    </div>
   </div>
 </header>
 
 <main>
-  <div class="wrap">
-    <div class="controls">
-      <div class="tabs" role="tablist" aria-label="種別で絞り込む">
-        <button class="tab" type="button" role="tab" data-type="all" aria-selected="true">すべて</button>
-        <button class="tab" type="button" role="tab" data-type="skill" aria-selected="false">スキル</button>
-        <button class="tab" type="button" role="tab" data-type="sheet" aria-selected="false">シート</button>
-        <button class="tab" type="button" role="tab" data-type="link" aria-selected="false">リンク</button>
-      </div>
-      <input id="search" class="search" type="search" placeholder="キーワードで探す（例：保護者、小テスト）" aria-label="キーワードで探す">
-    </div>
-
-    <p id="count" class="count"></p>
-    <ul id="grid" class="grid"></ul>
+  <div class="wrap layout">
+    <nav class="rail" aria-label="ジャンル">
+      <p class="rail-title">ジャンル</p>
+      <ul id="rail-list" class="rail-list"></ul>
+    </nav>
+    <div id="sections"></div>
   </div>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap"><p>AI Tool Studio</p></div>
+  <div class="wrap"><p>AI Tool Studio — どれも自由に使って、書き換えて構いません。</p></div>
 </footer>
 
 <script src="assets/app.js"></script>

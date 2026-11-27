@@ -1,4 +1,46 @@
 {
+  "genres": [
+    {
+      "id": "komu",
+      "label": "校務",
+      "note": "文書づくり・事務・行事運営"
+    },
+    {
+      "id": "jugyo",
+      "label": "授業づくり",
+      "note": "授業設計・教科指導・総合探究"
+    },
+    {
+      "id": "shido",
+      "label": "生徒指導",
+      "note": "報告・記録・生徒理解"
+    },
+    {
+      "id": "gakkyu",
+      "label": "学級活動",
+      "note": "朝の会・帰りの会・学級経営"
+    },
+    {
+      "id": "hoshin",
+      "label": "学校方針・提案",
+      "note": "職員会議の提案資料・学校の方針"
+    },
+    {
+      "id": "kenshu",
+      "label": "講演・研修",
+      "note": "講師の講演や研修のまとめ"
+    },
+    {
+      "id": "ai",
+      "label": "AI・ICT",
+      "note": "AIの活用そのものについて"
+    },
+    {
+      "id": "yomimono",
+      "label": "読み物・教材",
+      "note": "読んで考えるもの"
+    }
+  ],
   "items": [
     {
       "id": "hogosha-annai",
@@ -41,7 +83,87 @@
           "path": "downloads/skills/hogosha-annai.zip"
         }
       ],
-      "updated": "2026-09-17"
+      "updated": "2026-09-17",
+      "genre": "komu"
+    },
+    {
+      "id": "shioji-gyoji-r8",
+      "type": "app",
+      "title": "汐路中 行事予定をカレンダーへ（試行版）",
+      "summary": "令和8年度 汐路中の行事予定をGoogleカレンダーへ取り込む（試行版）",
+      "genre": "komu",
+      "tags": [
+        "校務"
+      ],
+      "url": "https://shioji-gyoji-r8.surge.sh/",
+      "updated": "2026-09",
+      "thumb": "assets/thumbs/shioji-gyoji-r8.jpg"
+    },
+    {
+      "id": "jikanwari-tool",
+      "type": "diagram",
+      "title": "時間割変更ツールのしくみ",
+      "summary": "先生が休むときの振替・自習監督・単元テストのコマ作りを決める時間割変更ツールの職員向け説明",
+      "genre": "komu",
+      "tags": [
+        "校務"
+      ],
+      "url": "https://jikanwari-tool.surge.sh/",
+      "updated": "2026-08",
+      "thumb": "assets/thumbs/jikanwari-tool.jpg"
+    },
+    {
+      "id": "beyond-borders",
+      "type": "app",
+      "title": "聖火リレー進捗ボード | Beyond Borders",
+      "summary": "聖火リレーの進捗を共有するボード",
+      "genre": "komu",
+      "tags": [
+        "行事"
+      ],
+      "url": "https://beyond-borders.surge.sh/",
+      "updated": "2026-05",
+      "thumb": "assets/thumbs/beyond-borders.jpg"
+    },
+    {
+      "id": "diagram-word-date-fy-tool",
+      "type": "app",
+      "title": "Word/PDF 日付更新",
+      "summary": "Word/PDFの日付を新年度に更新する。処理はブラウザ内で完結し、ファイルは送信されない",
+      "genre": "komu",
+      "tags": [
+        "校務"
+      ],
+      "url": "https://diagram-word-date-fy-tool.surge.sh/",
+      "updated": "2026-04",
+      "thumb": "assets/thumbs/diagram-word-date-fy-tool.jpg"
+    },
+    {
+      "id": "mojicheck",
+      "type": "app",
+      "title": "誤字脱字チェッカー",
+      "summary": "名古屋市教育委員会「ナゴヤ学びのコンパス」に基づく学校・教育機関向け文書校正支援ツール。公文書・保護者向け通知の誤字脱字・日付・論理矛盾をAIが検出します。",
+      "genre": "komu",
+      "tags": [
+        "校務",
+        "AI・ICT"
+      ],
+      "url": "https://mojicheck.surge.sh/",
+      "updated": "2026-04",
+      "thumb": "assets/thumbs/mojicheck.jpg"
+    },
+    {
+      "id": "diagram-btc-jugyo-kansatsu",
+      "type": "diagram",
+      "title": "BTCの授業を見て考えたこと",
+      "summary": "横浜市立都田西小学校の授業参観で気づいたことを1枚にまとめた図解",
+      "genre": "jugyo",
+      "tags": [
+        "授業づくり"
+      ],
+      "url": "https://diagram-btc-jugyo-kansatsu.surge.sh/",
+      "updated": "2026-11",
+      "thumb": "assets/thumbs/diagram-btc-jugyo-kansatsu.jpg"
     },
     {
       "id": "shoutest-question-bank",
@@ -79,7 +201,317 @@
           "path": "downloads/sheets/question-bank.csv"
         }
       ],
-      "updated": "2026-09-17"
+      "updated": "2026-09-17",
+      "genre": "jugyo"
+    },
+    {
+      "id": "jugyou-sekkei-workspace",
+      "type": "diagram",
+      "title": "授業設計ワークスペース — 4ペイン構成",
+      "summary": "教科書選択から時間割調整までを1画面で行う授業設計ワークスペースの図解（中2理科の例）",
+      "genre": "jugyo",
+      "tags": [
+        "授業づくり",
+        "AI・ICT"
+      ],
+      "url": "https://jugyou-sekkei-workspace.surge.sh/",
+      "updated": "2026-07",
+      "thumb": "assets/thumbs/jugyou-sekkei-workspace.jpg"
+    },
+    {
+      "id": "diagram-gakushu-shido-kiso",
+      "type": "diagram",
+      "title": "学習指導の基礎技術 図解",
+      "summary": "教師の動作・板書など、学習指導の基礎技術を章ごとに図解",
+      "genre": "jugyo",
+      "tags": [
+        "授業づくり"
+      ],
+      "url": "https://diagram-gakushu-shido-kiso.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/diagram-gakushu-shido-kiso.jpg"
+    },
+    {
+      "id": "flight-zentaikei",
+      "type": "diagram",
+      "title": "FLIGHT 全体計画 図解 — 総合的な学習の時間",
+      "summary": "総合的な学習の時間「FLIGHT」の全体計画（目指す生徒像・6つの力・3年間の流れ）",
+      "genre": "jugyo",
+      "tags": [
+        "総合・探究"
+      ],
+      "url": "https://flight-zentaikei.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/flight-zentaikei.jpg"
+    },
+    {
+      "id": "fuzoku-nagoya-soron",
+      "type": "diagram",
+      "title": "概念的思考を育む授業の創造 図解 — 愛知教育大学附属名古屋中学校",
+      "summary": "愛知教育大学附属名古屋中学校「概念的思考を育む授業の創造」の図解",
+      "genre": "jugyo",
+      "tags": [
+        "授業づくり",
+        "講演・研修"
+      ],
+      "url": "https://fuzoku-nagoya-soron.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/fuzoku-nagoya-soron.jpg"
+    },
+    {
+      "id": "diagram-seitoshidou",
+      "type": "diagram",
+      "title": "生徒指導提要の全体像",
+      "summary": "改訂版 生徒指導提要（令和4年12月・文部科学省）の全体像",
+      "genre": "shido",
+      "tags": [
+        "生徒指導"
+      ],
+      "url": "https://diagram-seitoshidou.surge.sh/",
+      "updated": "2026-11",
+      "thumb": "assets/thumbs/diagram-seitoshidou.jpg"
+    },
+    {
+      "id": "diagram-shidou-houkoku-tool",
+      "type": "diagram",
+      "title": "生徒指導報告メーカーのしくみ",
+      "summary": "聴取の録音から文字起こし・関係図・報告書を作る「生徒指導報告メーカー」のしくみ",
+      "genre": "shido",
+      "tags": [
+        "生徒指導",
+        "校務"
+      ],
+      "url": "https://diagram-shidou-houkoku-tool.surge.sh/",
+      "updated": "2026-04",
+      "thumb": "assets/thumbs/diagram-shidou-houkoku-tool.jpg"
+    },
+    {
+      "id": "diagram-shidou-houkoku",
+      "type": "app",
+      "title": "生徒指導報告メーカー",
+      "summary": "生徒指導・トラブル対応の報告書作成（関係図・名前置換・Word/PDF）",
+      "genre": "shido",
+      "tags": [
+        "生徒指導",
+        "校務"
+      ],
+      "url": "https://diagram-shidou-houkoku.surge.sh/",
+      "updated": "2026-04",
+      "thumb": "assets/thumbs/diagram-shidou-houkoku.jpg"
+    },
+    {
+      "id": "diagram-student-guidance-tool",
+      "type": "diagram",
+      "title": "生徒指導報告書・人間関係可視化ツール",
+      "summary": "生徒指導報告書の作成と人間関係の可視化を行うツールの紹介",
+      "genre": "shido",
+      "tags": [
+        "生徒指導",
+        "校務"
+      ],
+      "url": "https://diagram-student-guidance-tool.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/diagram-student-guidance-tool.jpg"
+    },
+    {
+      "id": "sakura-room",
+      "type": "app",
+      "title": "さくらるーむ",
+      "summary": "（説明未設定）",
+      "genre": "gakkyu",
+      "tags": [
+        "学級活動"
+      ],
+      "url": "https://sakura-room.surge.sh/",
+      "updated": "2026-11",
+      "thumb": "assets/thumbs/sakura-room.jpg"
+    },
+    {
+      "id": "adojan-app",
+      "type": "app",
+      "title": "アドジャン＆二者択一ジェネレーター",
+      "summary": "アドジャン（数字合わせの話題トーク）と二者択一のお題を出すタイマー付きツール",
+      "genre": "gakkyu",
+      "tags": [
+        "学級活動"
+      ],
+      "url": "https://adojan-app.surge.sh/",
+      "updated": "2026-09",
+      "thumb": "assets/thumbs/adojan-app.jpg"
+    },
+    {
+      "id": "diagram-ijime-boushi-hoshin",
+      "type": "diagram",
+      "title": "汐路中学校 いじめ防止基本方針",
+      "summary": "名古屋市立汐路中学校 いじめ防止基本方針（令和8年度版）の図解",
+      "genre": "hoshin",
+      "tags": [
+        "生徒指導",
+        "学校方針"
+      ],
+      "url": "https://diagram-ijime-boushi-hoshin.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/diagram-ijime-boushi-hoshin.jpg"
+    },
+    {
+      "id": "nagoya-compass",
+      "type": "diagram",
+      "title": "ナゴヤ学びのコンパス 図解",
+      "summary": "名古屋市「ナゴヤ学びのコンパス」の図解（3つの学びの姿・大人が大切にすること）",
+      "genre": "hoshin",
+      "tags": [
+        "学校方針"
+      ],
+      "url": "https://nagoya-compass.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/nagoya-compass.jpg"
+    },
+    {
+      "id": "shio-doryokuten",
+      "type": "diagram",
+      "title": "令和8年度 学校努力点 図解 | 汐路中学校",
+      "summary": "令和8年度 汐路中学校 学校努力点の図解",
+      "genre": "hoshin",
+      "tags": [
+        "学校方針"
+      ],
+      "url": "https://shio-doryokuten.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/shio-doryokuten.jpg"
+    },
+    {
+      "id": "diagram-wakuwaku-saki",
+      "type": "diagram",
+      "title": "ワクワクのその先へ｜講演のまとめ",
+      "summary": "キャリア教育講演会「ワクワクのその先へ」のまとめ",
+      "genre": "kenshu",
+      "tags": [
+        "講演・研修",
+        "キャリア教育"
+      ],
+      "url": "https://diagram-wakuwaku-saki.surge.sh/",
+      "updated": "2026-11",
+      "thumb": "assets/thumbs/diagram-wakuwaku-saki.jpg"
+    },
+    {
+      "id": "diagram-chikyu-stage",
+      "type": "diagram",
+      "title": "地球のステージ 平和の旅",
+      "summary": "映像と音楽で世界の4地域をめぐった講演「地球のステージ」のまとめ",
+      "genre": "kenshu",
+      "tags": [
+        "講演・研修",
+        "平和学習"
+      ],
+      "url": "https://diagram-chikyu-stage.surge.sh/",
+      "updated": "2026-11",
+      "thumb": "assets/thumbs/diagram-chikyu-stage.jpg"
+    },
+    {
+      "id": "kitagawa-260923",
+      "type": "diagram",
+      "title": "「何のために」学び、働き、生きるのか",
+      "summary": "「何のために」学び、働き、生きるのかを考える講演の図解",
+      "genre": "kenshu",
+      "tags": [
+        "講演・研修",
+        "キャリア教育"
+      ],
+      "url": "https://kitagawa-260923.surge.sh/",
+      "updated": "2026-09",
+      "thumb": "assets/thumbs/kitagawa-260923.jpg"
+    },
+    {
+      "id": "diagram-michi-wo-kiwameru",
+      "type": "diagram",
+      "title": "この道を極めるために",
+      "summary": "新社会人の現実と、この道を極めるために大切な教え",
+      "genre": "kenshu",
+      "tags": [
+        "講演・研修"
+      ],
+      "url": "https://diagram-michi-wo-kiwameru.surge.sh/",
+      "updated": "2026-04",
+      "thumb": "assets/thumbs/diagram-michi-wo-kiwameru.jpg"
+    },
+    {
+      "id": "school-update-deck",
+      "type": "diagram",
+      "title": "学校アップデート",
+      "summary": "学校をアップデートするためのスライド",
+      "genre": "ai",
+      "tags": [
+        "AI・ICT"
+      ],
+      "url": "https://school-update-deck.surge.sh/",
+      "updated": "2026-08",
+      "thumb": "assets/thumbs/school-update-deck.jpg"
+    },
+    {
+      "id": "kono-yubi-tomare",
+      "type": "diagram",
+      "title": "自分専用の「提案スキル」をつくる",
+      "summary": "配布スキルをもとに自分専用の「提案スキル」をつくる（AIスクール課題レポート）",
+      "genre": "ai",
+      "tags": [
+        "AI・ICT"
+      ],
+      "url": "https://kono-yubi-tomare.surge.sh/",
+      "updated": "2026-07",
+      "thumb": "assets/thumbs/kono-yubi-tomare.jpg"
+    },
+    {
+      "id": "diagram-giga-school-chugakko",
+      "type": "diagram",
+      "title": "今の中学生が生きる時代を知る｜生成AI・GIGAスクール時代の方向性",
+      "summary": "生成AI・GIGAスクール時代に中学生が生きる時代と学びの方向性",
+      "genre": "ai",
+      "tags": [
+        "AI・ICT"
+      ],
+      "url": "https://diagram-giga-school-chugakko.surge.sh/",
+      "updated": "2026-04",
+      "thumb": "assets/thumbs/diagram-giga-school-chugakko.jpg"
+    },
+    {
+      "id": "diagram-saigo-kagoshima",
+      "type": "diagram",
+      "title": "西郷隆盛の一生を鹿児島で歩く",
+      "summary": "銅像・洞窟・お墓など、鹿児島に残る西郷隆盛ゆかりの地でたどる一生",
+      "genre": "yomimono",
+      "tags": [
+        "社会"
+      ],
+      "url": "https://diagram-saigo-kagoshima.surge.sh/",
+      "updated": "2026-11",
+      "thumb": "assets/thumbs/diagram-saigo-kagoshima.jpg"
+    },
+    {
+      "id": "ano-hikari",
+      "type": "diagram",
+      "title": "あの光を見た自分を信じぬく",
+      "summary": "何者でもない不安と期待の中で、あの光を見た自分を信じぬく",
+      "genre": "yomimono",
+      "tags": [
+        "読み物"
+      ],
+      "url": "https://ano-hikari.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/ano-hikari.jpg"
+    },
+    {
+      "id": "yasashisa-merumagaza",
+      "type": "diagram",
+      "title": "優しい人ほど気づかない、本当の優しさ",
+      "summary": "先生という仕事の特殊性から考える、本当の優しさと今日から使える言葉",
+      "genre": "yomimono",
+      "tags": [
+        "読み物",
+        "生徒指導"
+      ],
+      "url": "https://yasashisa-merumagaza.surge.sh/",
+      "updated": "2026-03",
+      "thumb": "assets/thumbs/yasashisa-merumagaza.jpg"
     }
   ]
 }

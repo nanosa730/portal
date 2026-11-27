@@ -1,0 +1,41 @@
+name: リンク切れの確認
+
+on:
+  schedule:
+    # 毎週月曜 09:00 JST（= 月曜 00:00 UTC）
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 登録URLに疎通確認する
+        id: check
+        run: |
+          set +e
+          node tools/linkcheck.mjs | tee result.txt
+          echo "dead=$?" >> "$GITHUB_OUTPUT"
+
+      - name: 落ちていたら Issue を立てる（既にあれば追記）
+        if: steps.check.outputs.dead != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          body=$'ポータルに登録しているサイトのうち、応答しなかったものがあります。\n\n```\n'"$(grep ' NG ' result.txt || true)"$'\n```\n\n自分で `surge teardown` したものなら、items.json から該当項目を消してください。\n身に覚えがなければ、一時的な障害の可能性があります。\n\n（このIssueは週1回の自動確認が作成しています）'
+          existing="$(gh issue list --state open --label linkcheck --limit 1 --json number --jq '.[0].number')"
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh label create linkcheck --description "リンク切れの自動確認" --color d93f0b 2>/dev/null || true
+            gh issue create --title "リンク切れの疑い" --label linkcheck --body "$body"
+          fi
