@@ -698,6 +698,21 @@
       "genre": "jugyo"
     },
     {
+      "id": "hyoka-check",
+      "type": "app",
+      "title": "評価チェック（管理職用）",
+      "summary": "校務支援システムから出した成績データ（Excel／CSV）を読み込み、観点（ABC）と評定の食い違いや入力漏れ、クラス別・先生別の評定の平均と分布、学期間で大きく変わった生徒、保護者から説明を求められそうな箇所を一覧にする管理職向けの点検ツール。氏名の列は読み込み時に捨て、データはブラウザの外に送らない。",
+      "genre": "jugyo",
+      "url": "https://hyoka-check.surge.sh/",
+      "tags": [
+        "評価",
+        "評定",
+        "成績",
+        "管理職"
+      ],
+      "updated": "2026-11-28"
+    },
+    {
       "id": "diagram-btc-jugyo-kansatsu",
       "type": "diagram",
       "title": "BTCの授業を見て考えたこと",
