@@ -87,6 +87,469 @@
       "genre": "komu"
     },
     {
+      "id": "calendar-toroku",
+      "type": "skill",
+      "title": "写真からカレンダー登録スキル",
+      "summary": "案内文書や掲示物の写真を送って「登録して」と言うだけで、Googleカレンダーに予定を入れるスキル。提出期限があれば、期限日とその3営業日前の「起案」日を2件セットで登録する。",
+      "tags": [
+        "カレンダー",
+        "締切管理",
+        "Googleカレンダー",
+        "写真"
+      ],
+      "benefits": [
+        "紙の案内を見ながら日付・時刻・場所を打ち込む手間がなくなる",
+        "提出物は【期限】と、その3営業日前の【起案】が同時に入るので、締切の直前に気づく事故を防げる（土日・祝日は営業日から除く）",
+        "場所が分かるときは、Googleマップのリンクも説明欄に付く"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：claude.ai で Google カレンダーを接続しておく"
+        },
+        {
+          "text": "下のボタンから calendar-toroku.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip calendar-toroku.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "この写真の予定を登録して"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "calendar-toroku.zip",
+          "path": "downloads/skills/calendar-toroku.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "email-reply",
+      "type": "skill",
+      "title": "メール返信作成スキル",
+      "summary": "届いたメールと「返信に書きたいこと」の箇条書きを渡すと、足りない点を1つずつ確認しながら、自分の署名付きの返信文を仕上げるスキル。",
+      "tags": [
+        "メール",
+        "文書作成",
+        "敬語"
+      ],
+      "benefits": [
+        "箇条書きのメモから、相手と場面に合った敬語の返信文が整う",
+        "宛名・トーン・日程などのあいまいな点を先に1つずつ聞いてくるので、書き直しが減る",
+        "署名は1回設定すれば毎回付く"
+      ],
+      "steps": [
+        {
+          "text": "下のボタンから email-reply.zip をダウンロードする。"
+        },
+        {
+          "text": "zip を展開し、SKILL.md の「使う前に」にある箇所（署名の学校名・職名・氏名・住所・電話・メール）を自分の学校のものに書き換える。書き換えたらフォルダごと zip にし直す。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip email-reply.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "このメールに返信して"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "email-reply.zip",
+          "path": "downloads/skills/email-reply.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "gyoji-hokoku",
+      "type": "skill",
+      "title": "学校行事予定（報告）作成スキル",
+      "summary": "教育委員会に毎月出す「学校行事予定について（報告）」を、前年度同月のWordをもとに今年度の暦へ組み替えるスキル。様式はそのままで、日付・曜日・網掛け・文書番号を直す。",
+      "tags": [
+        "行事予定",
+        "報告書",
+        "Word",
+        "教育委員会"
+      ],
+      "benefits": [
+        "曜日のずれた前年度の表を1行ずつ直す作業がなくなる。行事は「第1木曜→第1木曜」のように曜日を保って移る",
+        "始業式など日付で決まる行事、重なり、第5週の扱いは勝手に決めず、選択肢を示して確認してくる",
+        "土日・祝日の網掛け、月末の行数、文書番号と発信日の全角数字までそろえて出力する"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：Claude がコードを実行できる環境と、前年度同月の報告書（.docx）。名古屋市教育委員会の様式に合わせて作ってある。祝日の表は令和8年度分だけ入っている"
+        },
+        {
+          "text": "下のボタンから gyoji-hokoku.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip gyoji-hokoku.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "10月分の行事報告を作って"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "gyoji-hokoku.zip",
+          "path": "downloads/skills/gyoji-hokoku.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "gyoji-tensha",
+      "type": "skill",
+      "title": "行事予定 転記スキル（職員室掲示用）",
+      "summary": "月別の行事予定原稿シートから、職員室に貼る月ごとの掲示表（Excel）を作るスキル。日付・曜日の更新、生徒欄・職員欄への転記、時刻のカッコ削除、縦書き用の並べ替え、列幅の統一まで一度に行う。",
+      "tags": [
+        "行事予定",
+        "Excel",
+        "掲示物"
+      ],
+      "benefits": [
+        "原稿から掲示表への手作業の転記がなくなり、写し漏れ・写し間違いが起きにくい",
+        "縦書きのセルは、左から読むと時系列になる順に並べ替える",
+        "文字数に応じて列幅をそろえるので、印刷して貼るまでの手直しが少ない"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：Excel 上で Claude を使える環境（Claude in Excel）と、原稿シート・前年度の掲示シートが入ったブック。列の構成はある学校の様式に合わせてあるので、違う場合は SKILL.md の列の表を直す"
+        },
+        {
+          "text": "下のボタンから gyoji-tensha.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip gyoji-tensha.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "10月の掲示表を作って"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "gyoji-tensha.zip",
+          "path": "downloads/skills/gyoji-tensha.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "hogosha-mail",
+      "type": "skill",
+      "title": "保護者配信メール作成スキル",
+      "summary": "保護者向けの案内文書（PDF・Word・写真）を渡すと、一斉配信メールの件名と本文を、スマホで読みやすい形にまとめるスキル。",
+      "tags": [
+        "保護者対応",
+        "メール",
+        "文書作成"
+      ],
+      "benefits": [
+        "案内文書から日時・会場・持ち物・回答期限・フォームのURLを拾い、決まった型に当てはめる",
+        "件名の頭に学校名を付ける、時候の挨拶は省くなど、配信メールの書き方が毎回そろう",
+        "文書にないことは補わず、読み取れない箇所は文面のあとで確認してくる"
+      ],
+      "steps": [
+        {
+          "text": "下のボタンから hogosha-mail.zip をダウンロードする。"
+        },
+        {
+          "text": "zip を展開し、SKILL.md の「使う前に」にある箇所（差出人の学校名と、件名の頭に付ける【〇〇中】）を自分の学校のものに書き換える。書き換えたらフォルダごと zip にし直す。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip hogosha-mail.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "この案内を保護者への配信メールにして"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "hogosha-mail.zip",
+          "path": "downloads/skills/hogosha-mail.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "hyosho-nyuryoku",
+      "type": "skill",
+      "title": "表彰記録入力スキル",
+      "summary": "賞状や大会結果の写真から、表彰記録のExcelに1人1行で記録を追記するスキル。学年・組・ふりがなは同じブックの生徒名簿から補う。",
+      "tags": [
+        "表彰",
+        "Excel",
+        "写真",
+        "記録"
+      ],
+      "benefits": [
+        "賞状を見ながら氏名・大会名・種目・順位を打ち込む作業がなくなる",
+        "名簿と照らし合わせ、「名簿にない」「同姓同名がいる」を書き込む前に知らせる。髙・﨑などの字の違いも吸収する",
+        "同じ記録がすでにあれば、二重に入れない"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：Claude がコードを実行できる環境と、表彰記録の Excel（「生徒名簿」シートと、書き込み先の「表彰入力」シート）。シート名が違うときは `--sheet` で指定できる"
+        },
+        {
+          "text": "下のボタンから hyosho-nyuryoku.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip hyosho-nyuryoku.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "この賞状を表彰記録に入れて"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "hyosho-nyuryoku.zip",
+          "path": "downloads/skills/hyosho-nyuryoku.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "kao-bokashi",
+      "type": "skill",
+      "title": "写真の顔ぼかしスキル",
+      "summary": "学校HPや配布物に載せる写真の顔を、自動検出と目視確認でぼかすスキル。講師やゲストの顔は残し、生徒の顔をぼかす。複数枚をまとめて処理できる。",
+      "tags": [
+        "写真",
+        "学校HP",
+        "個人情報",
+        "画像処理"
+      ],
+      "benefits": [
+        "1人ずつ手でぼかしを入れる作業がなくなる。遠くの小さな顔も拡大して探す",
+        "講師・ゲストは服装や立ち位置から見分けてぼかさない。判断がつかない人は確認してくる",
+        "誤検出（後頭部・服など）と見落としを画像で確かめてから渡す"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：Claude がコードを実行できる環境（初回に顔検出のモデルをインターネットから取得する）"
+        },
+        {
+          "text": "下のボタンから kao-bokashi.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip kao-bokashi.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "この写真の顔をぼかして"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "kao-bokashi.zip",
+          "path": "downloads/skills/kao-bokashi.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "kessai-check",
+      "type": "skill",
+      "title": "決裁前チェックスキル",
+      "summary": "学年通信・ほけんだより・保護者向け案内などの原稿を、誤字脱字・論理・敬語・安全面まで点検し、直す場所を番号付きの枠で示したPDF（注記ページ＋修正一覧表）を作るスキル。",
+      "tags": [
+        "校正",
+        "決裁",
+        "文書作成",
+        "PDF"
+      ],
+      "benefits": [
+        "指摘が原稿の上に番号付きの枠で示されるので、紙に手書きで直すときに場所を探さなくて済む",
+        "赤＝要修正、青＝推奨に分けるので、どこまで直すかを決めやすい",
+        "日付と曜日の照合、保護者宛ての敬語、やけど・受診などの安全面の一言まで点検する"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：Claude がコードを実行できる環境。原稿は PDF・Word・写真のどれでもよい"
+        },
+        {
+          "text": "下のボタンから kessai-check.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip kessai-check.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "この文書を決裁前にチェックして"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "kessai-check.zip",
+          "path": "downloads/skills/kessai-check.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "nenkei-sakusei",
+      "type": "skill",
+      "title": "年間計画（年計）作成スキル",
+      "summary": "前年度の年計Excelを次年度の暦に組み替えるスキル。行事を同じ週・同じ曜日へ移し、祝日を入れ直し、会議を木曜にそろえ、研修の回数を数えたうえで、要確認の点を一覧にする。",
+      "tags": [
+        "年間計画",
+        "行事予定",
+        "Excel"
+      ],
+      "benefits": [
+        "1年分の行事を手で1つずつ移す作業がなくなる。始業式など日付で決まる行事は先に確認して固定する",
+        "祝日に当たった行事は次の登校日へ移して赤字で示すので、見直す場所がすぐ分かる",
+        "学校で決めたルールを rules.md に書いておけば、毎年同じ基準で組み替えられる"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：Claude がコードを実行できる環境と、前年度の年計（「年計」シートのある Excel）。月ごとに3列・1日2行の並びが前提"
+        },
+        {
+          "text": "下のボタンから nenkei-sakusei.zip をダウンロードする。"
+        },
+        {
+          "text": "zip を展開し、SKILL.md の「使う前に」にある箇所（references/rules.md の学校のルール（日課・研修の回数・行事の決まり））を自分の学校のものに書き換える。書き換えたらフォルダごと zip にし直す。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip nenkei-sakusei.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "来年度の年計を作って"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "nenkei-sakusei.zip",
+          "path": "downloads/skills/nenkei-sakusei.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "school-news-writer",
+      "type": "skill",
+      "title": "学校HP「学校の様子」作成スキル",
+      "summary": "行事名・日付・箇条書きのメモから、学校ホームページの「学校の様子」に載せる紹介文（写真1枚つきを想定・100〜200字）を作るスキル。",
+      "tags": [
+        "学校HP",
+        "広報",
+        "文書作成"
+      ],
+      "benefits": [
+        "数行のメモから、保護者・地域向けの温かみのある紹介文ができる",
+        "入学式・宿泊行事・委員会活動など、行事の種類ごとに書く観点と構成の型が決めてある",
+        "複数日にわたる行事や、複数の行事を1つの記事にまとめる書き方にも対応する"
+      ],
+      "steps": [
+        {
+          "text": "下のボタンから school-news-writer.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip school-news-writer.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "学校の様子の文章を作って：5月27日〜29日 野外学習（2年）…"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "school-news-writer.zip",
+          "path": "downloads/skills/school-news-writer.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "shuccho-torikomi",
+      "type": "skill",
+      "title": "出張依頼 取込スキル",
+      "summary": "出張依頼・研修案内・会議通知などの写真やPDFから、出張整理用のExcelに取り込む「取込行」を作り、Googleドライブに保存するスキル。年休・職免の行も同じ形式で作れる。",
+      "tags": [
+        "出張",
+        "Excel",
+        "Googleドライブ"
+      ],
+      "benefits": [
+        "案内文書から日付・出席者・会の名前・時刻・会場を拾い、決まった1行の形にそろえる",
+        "宛先の役職（教頭・養護教諭など）を職員名簿の氏名に直す。決められないときは「？」にして確認してくる",
+        "複数日・複数会場の案内も、日ごとの行に分けて作る"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：「取込」行を読み込むマクロ付きの出張整理ブック（Excel。この zip には入っていない）と、claude.ai での Google ドライブの接続"
+        },
+        {
+          "text": "下のボタンから shuccho-torikomi.zip をダウンロードする。"
+        },
+        {
+          "text": "zip を展開し、SKILL.md の「使う前に」にある箇所（職員名簿の役職と氏名）を自分の学校のものに書き換える。書き換えたらフォルダごと zip にし直す。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip shuccho-torikomi.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "出張依頼です"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "shuccho-torikomi.zip",
+          "path": "downloads/skills/shuccho-torikomi.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "komu"
+    },
+    {
+      "id": "hogoshakai-nittei",
+      "type": "app",
+      "title": "保護者会 日程作成ツール",
+      "summary": "保護者の希望調査（Formsから出したExcel）から、学級ごとの保護者会（三者懇談会）の日程案を自動で作るツール。兄弟姉妹は同じ日の続きの時間に、×の時間帯は避けて割り振る。担任が手で直して、お知らせの配布物まで印刷できる。データはブラウザの中だけで処理する。",
+      "genre": "komu",
+      "url": "https://hogoshakai-nittei.surge.sh/",
+      "tags": [
+        "保護者会",
+        "三者懇談会",
+        "日程調整",
+        "Excel"
+      ],
+      "updated": "2026-11-28"
+    },
+    {
       "id": "shioji-gyoji-r8",
       "type": "app",
       "title": "汐路中 行事予定をカレンダーへ（試行版）",
@@ -151,6 +614,88 @@
       "url": "https://mojicheck.surge.sh/",
       "updated": "2026-04",
       "thumb": "assets/thumbs/mojicheck.jpg"
+    },
+    {
+      "id": "kanten-hyoka-shukei",
+      "type": "skill",
+      "title": "観点別評価 集計スキル",
+      "summary": "テスト結果の詳細CSVから、観点別のABC人数、評価の組み合わせ（AA〜CC）、学級別の人数と割合の3つの表を、Excelの数式で作るスキル。カットラインの点数を変えると、すべての表が連動する。",
+      "tags": [
+        "評価",
+        "観点別評価",
+        "Excel",
+        "テスト"
+      ],
+      "benefits": [
+        "黄色のセルの点数を動かすだけで、A・B・Cの人数と割合がその場で変わるので、カットラインを決めやすい",
+        "2観点の組み合わせ（AA〜CC）や、学級ごとの偏りも同じシートで見られる",
+        "欠席者は数えない。合計が受験者数と一致するかを確かめてから渡す"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：Excel 上で Claude を使える環境（Claude in Excel）と、観点配点・観点得点・組の列があるテスト結果のCSV"
+        },
+        {
+          "text": "下のボタンから kanten-hyoka-shukei.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip kanten-hyoka-shukei.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "観点別評価の人数を出して"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "kanten-hyoka-shukei.zip",
+          "path": "downloads/skills/kanten-hyoka-shukei.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "jugyo"
+    },
+    {
+      "id": "sonomama-shoutest",
+      "type": "skill",
+      "title": "そのまま小テスト作成スキル",
+      "summary": "教師用の問題集のスキャンPDFや写真から、Googleフォーム用の小テスト5問と差し替え候補を作り、問題銀行シートに貼れるTSVで書き出すスキル。問題集の問題を「そのまま」出す。",
+      "tags": [
+        "小テスト",
+        "Googleフォーム",
+        "問題作成",
+        "評価"
+      ],
+      "benefits": [
+        "重要語句を優先して5問を選び、選ばなかった問題も差し替え候補として残すので、入れ替えが一往復で済む",
+        "表記が揺れる語は選択式にする、許容解を登録するなど、自動採点で困らない形に整える",
+        "図つきの問題は画像を切り出して TSV に埋め込むので、画像をドライブに置く手間がない"
+      ],
+      "steps": [
+        {
+          "text": "使う前に用意するもの：Claude がコードを実行できる環境と、TSV を読み込んでフォームを作る「問題銀行」スプレッドシート（Apps Script 付き。この zip には入っていない）"
+        },
+        {
+          "text": "下のボタンから sonomama-shoutest.zip をダウンロードする。"
+        },
+        {
+          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
+          "code": "mkdir -p ~/.claude/skills && unzip sonomama-shoutest.zip -d ~/.claude/skills/"
+        },
+        {
+          "text": "Claude にこう頼むと、このスキルが呼び出される。",
+          "code": "この範囲で小テストを作って"
+        }
+      ],
+      "downloads": [
+        {
+          "label": "sonomama-shoutest.zip",
+          "path": "downloads/skills/sonomama-shoutest.zip"
+        }
+      ],
+      "updated": "2026-11-28",
+      "genre": "jugyo"
     },
     {
       "id": "diagram-btc-jugyo-kansatsu",
@@ -512,536 +1057,6 @@
       "url": "https://yasashisa-merumagaza.surge.sh/",
       "updated": "2026-03",
       "thumb": "assets/thumbs/yasashisa-merumagaza.jpg"
-    },
-    {
-      "id": "calendar-toroku",
-      "type": "skill",
-      "title": "写真からカレンダー登録スキル",
-      "summary": "案内文書や掲示物の写真を送って「登録して」と言うだけで、Googleカレンダーに予定を入れるスキル。提出期限があれば、期限日とその3営業日前の「起案」日を2件セットで登録する。",
-      "tags": [
-        "カレンダー",
-        "締切管理",
-        "Googleカレンダー",
-        "写真"
-      ],
-      "benefits": [
-        "紙の案内を見ながら日付・時刻・場所を打ち込む手間がなくなる",
-        "提出物は【期限】と、その3営業日前の【起案】が同時に入るので、締切の直前に気づく事故を防げる（土日・祝日は営業日から除く）",
-        "場所が分かるときは、Googleマップのリンクも説明欄に付く"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：claude.ai で Google カレンダーを接続しておく"
-        },
-        {
-          "text": "下のボタンから calendar-toroku.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip calendar-toroku.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "この写真の予定を登録して"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "calendar-toroku.zip",
-          "path": "downloads/skills/calendar-toroku.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "email-reply",
-      "type": "skill",
-      "title": "メール返信作成スキル",
-      "summary": "届いたメールと「返信に書きたいこと」の箇条書きを渡すと、足りない点を1つずつ確認しながら、自分の署名付きの返信文を仕上げるスキル。",
-      "tags": [
-        "メール",
-        "文書作成",
-        "敬語"
-      ],
-      "benefits": [
-        "箇条書きのメモから、相手と場面に合った敬語の返信文が整う",
-        "宛名・トーン・日程などのあいまいな点を先に1つずつ聞いてくるので、書き直しが減る",
-        "署名は1回設定すれば毎回付く"
-      ],
-      "steps": [
-        {
-          "text": "下のボタンから email-reply.zip をダウンロードする。"
-        },
-        {
-          "text": "zip を展開し、SKILL.md の「使う前に」にある箇所（署名の学校名・職名・氏名・住所・電話・メール）を自分の学校のものに書き換える。書き換えたらフォルダごと zip にし直す。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip email-reply.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "このメールに返信して"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "email-reply.zip",
-          "path": "downloads/skills/email-reply.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "gyoji-hokoku",
-      "type": "skill",
-      "title": "学校行事予定（報告）作成スキル",
-      "summary": "教育委員会に毎月出す「学校行事予定について（報告）」を、前年度同月のWordをもとに今年度の暦へ組み替えるスキル。様式はそのままで、日付・曜日・網掛け・文書番号を直す。",
-      "tags": [
-        "行事予定",
-        "報告書",
-        "Word",
-        "教育委員会"
-      ],
-      "benefits": [
-        "曜日のずれた前年度の表を1行ずつ直す作業がなくなる。行事は「第1木曜→第1木曜」のように曜日を保って移る",
-        "始業式など日付で決まる行事、重なり、第5週の扱いは勝手に決めず、選択肢を示して確認してくる",
-        "土日・祝日の網掛け、月末の行数、文書番号と発信日の全角数字までそろえて出力する"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：Claude がコードを実行できる環境と、前年度同月の報告書（.docx）。名古屋市教育委員会の様式に合わせて作ってある。祝日の表は令和8年度分だけ入っている"
-        },
-        {
-          "text": "下のボタンから gyoji-hokoku.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip gyoji-hokoku.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "10月分の行事報告を作って"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "gyoji-hokoku.zip",
-          "path": "downloads/skills/gyoji-hokoku.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "gyoji-tensha",
-      "type": "skill",
-      "title": "行事予定 転記スキル（職員室掲示用）",
-      "summary": "月別の行事予定原稿シートから、職員室に貼る月ごとの掲示表（Excel）を作るスキル。日付・曜日の更新、生徒欄・職員欄への転記、時刻のカッコ削除、縦書き用の並べ替え、列幅の統一まで一度に行う。",
-      "tags": [
-        "行事予定",
-        "Excel",
-        "掲示物"
-      ],
-      "benefits": [
-        "原稿から掲示表への手作業の転記がなくなり、写し漏れ・写し間違いが起きにくい",
-        "縦書きのセルは、左から読むと時系列になる順に並べ替える",
-        "文字数に応じて列幅をそろえるので、印刷して貼るまでの手直しが少ない"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：Excel 上で Claude を使える環境（Claude in Excel）と、原稿シート・前年度の掲示シートが入ったブック。列の構成はある学校の様式に合わせてあるので、違う場合は SKILL.md の列の表を直す"
-        },
-        {
-          "text": "下のボタンから gyoji-tensha.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip gyoji-tensha.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "10月の掲示表を作って"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "gyoji-tensha.zip",
-          "path": "downloads/skills/gyoji-tensha.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "hogosha-mail",
-      "type": "skill",
-      "title": "保護者配信メール作成スキル",
-      "summary": "保護者向けの案内文書（PDF・Word・写真）を渡すと、一斉配信メールの件名と本文を、スマホで読みやすい形にまとめるスキル。",
-      "tags": [
-        "保護者対応",
-        "メール",
-        "文書作成"
-      ],
-      "benefits": [
-        "案内文書から日時・会場・持ち物・回答期限・フォームのURLを拾い、決まった型に当てはめる",
-        "件名の頭に学校名を付ける、時候の挨拶は省くなど、配信メールの書き方が毎回そろう",
-        "文書にないことは補わず、読み取れない箇所は文面のあとで確認してくる"
-      ],
-      "steps": [
-        {
-          "text": "下のボタンから hogosha-mail.zip をダウンロードする。"
-        },
-        {
-          "text": "zip を展開し、SKILL.md の「使う前に」にある箇所（差出人の学校名と、件名の頭に付ける【〇〇中】）を自分の学校のものに書き換える。書き換えたらフォルダごと zip にし直す。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip hogosha-mail.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "この案内を保護者への配信メールにして"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "hogosha-mail.zip",
-          "path": "downloads/skills/hogosha-mail.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "hyosho-nyuryoku",
-      "type": "skill",
-      "title": "表彰記録入力スキル",
-      "summary": "賞状や大会結果の写真から、表彰記録のExcelに1人1行で記録を追記するスキル。学年・組・ふりがなは同じブックの生徒名簿から補う。",
-      "tags": [
-        "表彰",
-        "Excel",
-        "写真",
-        "記録"
-      ],
-      "benefits": [
-        "賞状を見ながら氏名・大会名・種目・順位を打ち込む作業がなくなる",
-        "名簿と照らし合わせ、「名簿にない」「同姓同名がいる」を書き込む前に知らせる。髙・﨑などの字の違いも吸収する",
-        "同じ記録がすでにあれば、二重に入れない"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：Claude がコードを実行できる環境と、表彰記録の Excel（「生徒名簿」シートと、書き込み先の「表彰入力」シート）。シート名が違うときは `--sheet` で指定できる"
-        },
-        {
-          "text": "下のボタンから hyosho-nyuryoku.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip hyosho-nyuryoku.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "この賞状を表彰記録に入れて"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "hyosho-nyuryoku.zip",
-          "path": "downloads/skills/hyosho-nyuryoku.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "kanten-hyoka-shukei",
-      "type": "skill",
-      "title": "観点別評価 集計スキル",
-      "summary": "テスト結果の詳細CSVから、観点別のABC人数、評価の組み合わせ（AA〜CC）、学級別の人数と割合の3つの表を、Excelの数式で作るスキル。カットラインの点数を変えると、すべての表が連動する。",
-      "tags": [
-        "評価",
-        "観点別評価",
-        "Excel",
-        "テスト"
-      ],
-      "benefits": [
-        "黄色のセルの点数を動かすだけで、A・B・Cの人数と割合がその場で変わるので、カットラインを決めやすい",
-        "2観点の組み合わせ（AA〜CC）や、学級ごとの偏りも同じシートで見られる",
-        "欠席者は数えない。合計が受験者数と一致するかを確かめてから渡す"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：Excel 上で Claude を使える環境（Claude in Excel）と、観点配点・観点得点・組の列があるテスト結果のCSV"
-        },
-        {
-          "text": "下のボタンから kanten-hyoka-shukei.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip kanten-hyoka-shukei.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "観点別評価の人数を出して"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "kanten-hyoka-shukei.zip",
-          "path": "downloads/skills/kanten-hyoka-shukei.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "jugyo"
-    },
-    {
-      "id": "kao-bokashi",
-      "type": "skill",
-      "title": "写真の顔ぼかしスキル",
-      "summary": "学校HPや配布物に載せる写真の顔を、自動検出と目視確認でぼかすスキル。講師やゲストの顔は残し、生徒の顔をぼかす。複数枚をまとめて処理できる。",
-      "tags": [
-        "写真",
-        "学校HP",
-        "個人情報",
-        "画像処理"
-      ],
-      "benefits": [
-        "1人ずつ手でぼかしを入れる作業がなくなる。遠くの小さな顔も拡大して探す",
-        "講師・ゲストは服装や立ち位置から見分けてぼかさない。判断がつかない人は確認してくる",
-        "誤検出（後頭部・服など）と見落としを画像で確かめてから渡す"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：Claude がコードを実行できる環境（初回に顔検出のモデルをインターネットから取得する）"
-        },
-        {
-          "text": "下のボタンから kao-bokashi.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip kao-bokashi.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "この写真の顔をぼかして"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "kao-bokashi.zip",
-          "path": "downloads/skills/kao-bokashi.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "kessai-check",
-      "type": "skill",
-      "title": "決裁前チェックスキル",
-      "summary": "学年通信・ほけんだより・保護者向け案内などの原稿を、誤字脱字・論理・敬語・安全面まで点検し、直す場所を番号付きの枠で示したPDF（注記ページ＋修正一覧表）を作るスキル。",
-      "tags": [
-        "校正",
-        "決裁",
-        "文書作成",
-        "PDF"
-      ],
-      "benefits": [
-        "指摘が原稿の上に番号付きの枠で示されるので、紙に手書きで直すときに場所を探さなくて済む",
-        "赤＝要修正、青＝推奨に分けるので、どこまで直すかを決めやすい",
-        "日付と曜日の照合、保護者宛ての敬語、やけど・受診などの安全面の一言まで点検する"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：Claude がコードを実行できる環境。原稿は PDF・Word・写真のどれでもよい"
-        },
-        {
-          "text": "下のボタンから kessai-check.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip kessai-check.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "この文書を決裁前にチェックして"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "kessai-check.zip",
-          "path": "downloads/skills/kessai-check.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "nenkei-sakusei",
-      "type": "skill",
-      "title": "年間計画（年計）作成スキル",
-      "summary": "前年度の年計Excelを次年度の暦に組み替えるスキル。行事を同じ週・同じ曜日へ移し、祝日を入れ直し、会議を木曜にそろえ、研修の回数を数えたうえで、要確認の点を一覧にする。",
-      "tags": [
-        "年間計画",
-        "行事予定",
-        "Excel"
-      ],
-      "benefits": [
-        "1年分の行事を手で1つずつ移す作業がなくなる。始業式など日付で決まる行事は先に確認して固定する",
-        "祝日に当たった行事は次の登校日へ移して赤字で示すので、見直す場所がすぐ分かる",
-        "学校で決めたルールを rules.md に書いておけば、毎年同じ基準で組み替えられる"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：Claude がコードを実行できる環境と、前年度の年計（「年計」シートのある Excel）。月ごとに3列・1日2行の並びが前提"
-        },
-        {
-          "text": "下のボタンから nenkei-sakusei.zip をダウンロードする。"
-        },
-        {
-          "text": "zip を展開し、SKILL.md の「使う前に」にある箇所（references/rules.md の学校のルール（日課・研修の回数・行事の決まり））を自分の学校のものに書き換える。書き換えたらフォルダごと zip にし直す。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip nenkei-sakusei.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "来年度の年計を作って"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "nenkei-sakusei.zip",
-          "path": "downloads/skills/nenkei-sakusei.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "school-news-writer",
-      "type": "skill",
-      "title": "学校HP「学校の様子」作成スキル",
-      "summary": "行事名・日付・箇条書きのメモから、学校ホームページの「学校の様子」に載せる紹介文（写真1枚つきを想定・100〜200字）を作るスキル。",
-      "tags": [
-        "学校HP",
-        "広報",
-        "文書作成"
-      ],
-      "benefits": [
-        "数行のメモから、保護者・地域向けの温かみのある紹介文ができる",
-        "入学式・宿泊行事・委員会活動など、行事の種類ごとに書く観点と構成の型が決めてある",
-        "複数日にわたる行事や、複数の行事を1つの記事にまとめる書き方にも対応する"
-      ],
-      "steps": [
-        {
-          "text": "下のボタンから school-news-writer.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip school-news-writer.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "学校の様子の文章を作って：5月27日〜29日 野外学習（2年）…"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "school-news-writer.zip",
-          "path": "downloads/skills/school-news-writer.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "shuccho-torikomi",
-      "type": "skill",
-      "title": "出張依頼 取込スキル",
-      "summary": "出張依頼・研修案内・会議通知などの写真やPDFから、出張整理用のExcelに取り込む「取込行」を作り、Googleドライブに保存するスキル。年休・職免の行も同じ形式で作れる。",
-      "tags": [
-        "出張",
-        "Excel",
-        "Googleドライブ"
-      ],
-      "benefits": [
-        "案内文書から日付・出席者・会の名前・時刻・会場を拾い、決まった1行の形にそろえる",
-        "宛先の役職（教頭・養護教諭など）を職員名簿の氏名に直す。決められないときは「？」にして確認してくる",
-        "複数日・複数会場の案内も、日ごとの行に分けて作る"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：「取込」行を読み込むマクロ付きの出張整理ブック（Excel。この zip には入っていない）と、claude.ai での Google ドライブの接続"
-        },
-        {
-          "text": "下のボタンから shuccho-torikomi.zip をダウンロードする。"
-        },
-        {
-          "text": "zip を展開し、SKILL.md の「使う前に」にある箇所（職員名簿の役職と氏名）を自分の学校のものに書き換える。書き換えたらフォルダごと zip にし直す。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip shuccho-torikomi.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "出張依頼です"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "shuccho-torikomi.zip",
-          "path": "downloads/skills/shuccho-torikomi.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "komu"
-    },
-    {
-      "id": "sonomama-shoutest",
-      "type": "skill",
-      "title": "そのまま小テスト作成スキル",
-      "summary": "教師用の問題集のスキャンPDFや写真から、Googleフォーム用の小テスト5問と差し替え候補を作り、問題銀行シートに貼れるTSVで書き出すスキル。問題集の問題を「そのまま」出す。",
-      "tags": [
-        "小テスト",
-        "Googleフォーム",
-        "問題作成",
-        "評価"
-      ],
-      "benefits": [
-        "重要語句を優先して5問を選び、選ばなかった問題も差し替え候補として残すので、入れ替えが一往復で済む",
-        "表記が揺れる語は選択式にする、許容解を登録するなど、自動採点で困らない形に整える",
-        "図つきの問題は画像を切り出して TSV に埋め込むので、画像をドライブに置く手間がない"
-      ],
-      "steps": [
-        {
-          "text": "使う前に用意するもの：Claude がコードを実行できる環境と、TSV を読み込んでフォームを作る「問題銀行」スプレッドシート（Apps Script 付き。この zip には入っていない）"
-        },
-        {
-          "text": "下のボタンから sonomama-shoutest.zip をダウンロードする。"
-        },
-        {
-          "text": "claude.ai なら［設定］→［機能］のスキル欄から zip をアップロードする。Claude Code なら、展開したフォルダをスキル置き場に入れる。",
-          "code": "mkdir -p ~/.claude/skills && unzip sonomama-shoutest.zip -d ~/.claude/skills/"
-        },
-        {
-          "text": "Claude にこう頼むと、このスキルが呼び出される。",
-          "code": "この範囲で小テストを作って"
-        }
-      ],
-      "downloads": [
-        {
-          "label": "sonomama-shoutest.zip",
-          "path": "downloads/skills/sonomama-shoutest.zip"
-        }
-      ],
-      "updated": "2026-11-28",
-      "genre": "jugyo"
     }
   ]
 }
