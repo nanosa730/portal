@@ -547,7 +547,8 @@
         "日程調整",
         "Excel"
       ],
-      "updated": "2026-11-28"
+      "updated": "2026-11-28",
+      "thumb": "assets/thumbs/hogoshakai-nittei.jpg"
     },
     {
       "id": "shioji-gyoji-r8",
@@ -710,7 +711,8 @@
         "成績",
         "管理職"
       ],
-      "updated": "2026-11-28"
+      "updated": "2026-11-28",
+      "thumb": "assets/thumbs/hyoka-check.jpg"
     },
     {
       "id": "diagram-btc-jugyo-kansatsu",
